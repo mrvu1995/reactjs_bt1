@@ -1,0 +1,20 @@
+var Com = React.createClass({
+  add(){
+    this.setState({num: this.state.num + 1});
+  },
+
+  getInitialState(){
+      return{num: 0};
+  },
+
+  render(){
+    return(
+      <button onClick={this.add}>Hello {this.state.num}</button>
+    );
+  }
+});
+
+ReactDOM.render(
+  <Com/>
+  ,document.getElementById('root')
+);
